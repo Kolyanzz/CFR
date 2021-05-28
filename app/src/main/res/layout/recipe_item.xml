@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="wrap_content"
+
+    android:layout_marginEnd="@dimen/_16sdp"
+    android:elevation="@dimen/_2sdp"
+    android:background="@drawable/recipe_item_bg"
+    android:padding="@dimen/_16sdp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recipe_img_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Эту картинку поставил просто для тестов-->
+        <!--А то меня эти аватарки гугловские смущают-->
+        <ImageView
+            android:id="@+id/recipe_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_toolbar_photo" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/recipe_name"
+        style="@style/ItemTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/recipe_img_container"
+        tools:text="Свинина жареная с ананасами" />
+
+    <RatingBar
+        android:id="@+id/top_food_rating"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_of_rating_bar"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:rating="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recipe_name" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_favorite_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/recipe_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

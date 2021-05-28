@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="261dp"
+    android:height="65dp"
+    android:viewportWidth="261"
+    android:viewportHeight="65">
+
+    <solid
+        android:color="#8d8d8d
+
+"
+        />
+    <corners
+        android:bottomRightRadius="25dp" />
+
+</shape>

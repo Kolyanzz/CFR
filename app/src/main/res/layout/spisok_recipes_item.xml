@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginTop="@dimen/_16sdp"
+    android:layout_marginEnd="@dimen/_16sdp">
+
+    <TextView
+        android:id="@+id/section_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Блюда из мяса" />
+
+    <ImageView
+        android:id="@+id/recipe_img"
+        android:layout_width="@dimen/_72sdp"
+        android:layout_height="@dimen/_72sdp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintTop_toBottomOf="@id/section_name"
+        tools:src="@drawable/ic_toolbar_photo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/recipe_name"
+        style="@style/ItemTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toEndOf="@id/recipe_img"
+        app:layout_constraintTop_toBottomOf="@id/section_name"
+        tools:text="Свинина жареная с ананасами" />
+
+    <RatingBar
+        android:id="@+id/top_food_rating"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_of_rating_bar"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:rating="5"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintStart_toEndOf="@+id/recipe_img"
+        app:layout_constraintTop_toBottomOf="@id/recipe_name" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:background="@drawable/ic_favorite_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@id/section_name" />
+    <TextView
+        android:id="@+id/ingridients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toEndOf="@id/recipe_img"
+        app:layout_constraintTop_toBottomOf="@id/top_food_rating"
+        tools:text="Свинина, ананасы, марковь..." />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
