@@ -7,19 +7,16 @@ import com.kolumbo.chinesefoodrecipes.database.RecipesDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+
+
 class RecipeRepository(
     private val mRecipeDao: RecipesDao
 ) {
     var allRecipes: LiveData<List<Recipe>> = MutableLiveData()
+
     fun getAllRecipes() {
         GlobalScope.launch(Dispatchers.IO) {
             allRecipes = mRecipeDao.getAllRecipes()
-        }
-    }
-
-    fun searchRecipes(q: String, onSuccess: (recipes: List<Recipe>) -> Unit) {
-        GlobalScope.launch(Dispatchers.IO) {
-            onSuccess(mRecipeDao.searchRecipes(q))
         }
     }
 }

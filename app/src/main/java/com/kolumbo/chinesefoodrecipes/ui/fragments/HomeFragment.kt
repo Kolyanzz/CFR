@@ -18,6 +18,9 @@ import com.kolumbo.chinesefoodrecipes.models.SectionRecipes
 import com.kolumbo.chinesefoodrecipes.ui.activities.MainActivity
 import com.kolumbo.chinesefoodrecipes.ui.base.BaseRecyclerViewAdapter
 class HomeFragment : Fragment() {
+
+
+
     private lateinit var binding: FragmentHomeBinding
     private lateinit var viewModel: HomeViewModel
     private lateinit var recipesAdapter: BaseRecyclerViewAdapter<SectionRecipes>

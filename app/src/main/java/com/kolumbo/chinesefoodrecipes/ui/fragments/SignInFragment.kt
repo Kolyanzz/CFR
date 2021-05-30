@@ -47,9 +47,10 @@ class SignInFragment : Fragment() {
         // Чтобы можно было пропустить авторизацию
         // TODO Удалить позже
 
-        mBinding.signInButton.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
-        }
+        //переход на homeFragment по кнопке с SignInFragment
+//        mBinding.signInButton.setOnClickListener {
+//            findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
+//        }
 
         // Inflate the layout for this fragment
         return mBinding.root
@@ -58,7 +59,7 @@ class SignInFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         // На время авторизации скрываем BottomNavigation
-        (requireActivity() as MainActivity).binding.bottomNavigationView.visibility = View.GONE
+//        (requireActivity() as MainActivity).binding.bottomNavigationView.visibility = View.GONE
     }
 
     companion object {
